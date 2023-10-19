@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-set -euxo -pipefail
+set -euxo pipefail
 
 REPO_URL="https://github.com/didi64/Programmieren_TISTEL2324"
 
@@ -10,12 +10,6 @@ REPO_DIR="$NB_DIR/src"
 NB_DIR="${ROOT}/notebooks"
 MODUL_DIR="$NB_DIR/modules"
 BIN_DIR="$NB_DIR/.bin"
-
-for item in notebooks scripts modules; do
-    if [[ ! -d "${NB_DIR}/${item}" ]]; then
-        mkdir "${NB_DIR}/${item}"
-    fi    
-done
 
 if [[ -d $GIT_REPO ]]; then
     while true; do
