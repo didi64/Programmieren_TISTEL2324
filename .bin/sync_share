@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+ROOT="${HOME}/work"
+NB_DIR="${ROOT}/notebooks"
+SHARE_DIR="${NB_DIR}/share"
+
+# check if anything changes with
+# REPO_DIR remote update
+# REPO_DIR diff remotes/origin/HEAD
+
+git -C "$SHARE_DIR" add .
+git -C "$SHARE_DIR" commit . -m "$(date)" || true
+git -C "$SHARE_DIR" fetch
+git -C "$SHARE_DIR" merge --no-ff --no-edit
+git -C "$SHARE_DIR" push

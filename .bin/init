@@ -1,0 +1,45 @@
+#!/usr/bin/bash 
+
+set -euxo -pipefail
+
+REPO_URL="https://github.com/didi64/Programmieren_TISTEL2324"
+
+ROOT="${HOME}/work"
+REPO_DIR="$NB_DIR/src"
+
+NB_DIR="${ROOT}/notebooks"
+MODUL_DIR="$NB_DIR/modules"
+BIN_DIR="$NB_DIR/.bin"
+
+for item in notebooks scripts modules; do
+    if [[ ! -d "${NB_DIR}/${item}" ]]; then
+        mkdir "${NB_DIR}/${item}"
+    fi    
+done
+
+if [[ -d $GIT_REPO ]]; then
+    while true; do
+        read -r -p "reinitialize? (Y/N): " answer
+        case $answer in
+            [Yy]* ) break;;
+            [Nn]* ) exit;;
+            * ) echo "Please answer Y or N.";;
+        esac
+    done
+
+    rm -rf $GIT_REPO
+fi
+
+git -C $REPO_URL clone "$REPO_DIR"
+find "$REPO_DIR" -type f -name "*.ipynb" -exec chmod 444 {} \;
+
+for item in "$NB_DIR" "MODUL_DIR" "BIN_DIR"; do
+    if [[ ! -d "${item}" ]]; then
+        mkdir "${ROOT}/${item}"
+    fi    
+done
+
+cp "$REPO_DIR"/.bin/*  "$BIN_DIR"
+cp "$REPO_DIR"/module_search_path "$ROOT"
+
+

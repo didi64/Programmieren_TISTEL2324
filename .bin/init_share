@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+REPO="tistel22a"
+OWNER="tistel2324"
+
+ROOT="${HOME}/work"
+NB_DIR="${ROOT}/notebooks"
+REPO_DIR="${NB_DIR}/src"
+SHARE_DIR="{$NB_DIR}/share"
+
+token=$(cat "$NB_DIR/.token_tistel2324")
+branch=$(cat "$NB_DIR/.user")
+
+if [[ -d "$SHARE_DIR" ]]; then
+    rm -rf "$SHARE_DIR"
+fi
+
+git clone -b "$branch" --single-branch "https://${OWNER}:${token}@github.com/${OWNER}/${REPO}.git" "$SHARE_DIR"
+cp "${REPO_DIR}/.gitignore" "$SHARE_DIR"
