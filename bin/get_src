@@ -34,7 +34,7 @@ for folder in "$NB_DIR" "$MODUL_DIR" "$BIN_DIR"; do
     fi    
 done
 
-cp "$REPO_DIR"/.bin/*  "$BIN_DIR"
+cp "$REPO_DIR"/bin/*  "$BIN_DIR"
 cp "$REPO_DIR"/module_search_path "$ROOT"
 
 

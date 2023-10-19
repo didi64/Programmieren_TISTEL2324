@@ -44,8 +44,8 @@ EOF
 printf "$HELP"
 
 process_file () {
-    find "$REPO_DIR" -type d -name $1 -exec cp -ri {} "$notebooks" \;
-    find "$REPO_DIR" -type f -name $1 -exec cp -i {} "$notebooks" \;
+    find "$REPO_DIR" -type d -name $1 -exec cp -ri {} "$NB_DIR" \;
+    find "$REPO_DIR" -type f -name $1 -exec cp -i {} "$NB_DIR" \;
 }
 
 pull () {
