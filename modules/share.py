@@ -7,7 +7,7 @@ SRC = '/home/tistel/work/src'
 
 
 def init_share(pin):
-    with open(SRC + '/data/.init.pkl','rb') as f:
+    with open(SRC + '/data/init.pkl','rb') as f:
         data=pickle.load(f)
     with open(SRC + '/data/emails.pkl','rb') as f:
         emails=pickle.load(f)  
