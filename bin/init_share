@@ -7,15 +7,19 @@ OWNER="tistel2324"
 
 ROOT="${HOME}/work"
 NB_DIR="${ROOT}/notebooks"
-REPO_DIR="${NB_DIR}/src"
-SHARE_DIR="{$NB_DIR}/share"
+REPO_DIR="${ROOT}/src"
+SHARE_DIR="${NB_DIR}/share"
 
-token=$(cat "$NB_DIR/.token_tistel2324")
-branch=$(cat "$NB_DIR/.user")
+token=$(cat "$ROOT/.token_tistel2324")
+branch=$(cat "$ROOT/.user")
 
 if [[ -d "$SHARE_DIR" ]]; then
     rm -rf "$SHARE_DIR"
 fi
 
-git clone -b "$branch" --single-branch "https://${OWNER}:${token}@github.com/${OWNER}/${REPO}.git" "$SHARE_DIR"
+git clone -b "$branch" --single-branch "https://${OWNER}:${token}@github.com/${OWNER}/${REPO}.git" "${SHARE_DIR}"
+
+name=(${branch//./ })
+git -C ${SHARE_DIR} config --local user.email "${branch}@edu.teko.com"
+git -C ${SHARE_DIR} config --local user.name "${name[0]} ${name[1]}"
 cp "${REPO_DIR}/.gitignore" "$SHARE_DIR"
