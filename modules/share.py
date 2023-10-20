@@ -1,7 +1,7 @@
 import sys
 import pickle
 import subprocess
-from pathlib import Path
+
 
 ROOT = '/home/tistel/work'
 SRC = '/home/tistel/work/src'
@@ -26,7 +26,7 @@ def init_share(pin):
     with open(ROOT + '/.user', 'w') as f:
         f.write(user)
         
-    with open(ROOT  + '.token_tistel2324', 'w') as f:
+    with open(ROOT  + '/.token_tistel2324', 'w') as f:
         f.write(tok)
         
     res = subprocess.call(ROOT + '/bin/init_share')
