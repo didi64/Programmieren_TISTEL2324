@@ -1,4 +1,4 @@
-#!/usr/bin/bash -x
+#!/bin/bash
 
 set -euo pipefail
 
@@ -8,9 +8,6 @@ ROOT="${HOME}/work"
 
 REPO_DIR="$ROOT/src"
 NB_DIR="${ROOT}/notebooks"
-BIN_DIR="$ROOT/bin"
-MODUL_DIR="$ROOT/modules"
-
 
 CONTENTS="${REPO_DIR}/contents.txt"
 
