@@ -21,7 +21,8 @@ def init_share(pin):
     user = input('Enter Email prefix (Teil vor @):')
     if user + '@edu.teko.ch' not in [x for _,_,x in emails]:
         print('Prefix {} not found!'.format(user), file=sys.stderr)
-        
+        return
+    
     with open(ROOT + '/.user', 'w') as f:
         f.write(user)
         
