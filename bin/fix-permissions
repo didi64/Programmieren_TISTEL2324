@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+set -euo pipefail
+find -L "$HOME/work" -type f -name "*.ipynb" -exec chmod 644 {} \;
