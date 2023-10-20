@@ -33,4 +33,4 @@ def init_share(pin):
     if res:
         print('share=Folder fuer User {} eingerichtet.'.format(user))     
     else:
-        print('Etwas ging schief!', file=sys.stderr)
+        print('Etwas ging schieferrorcode {}'.format(res), file=sys.stderr)
