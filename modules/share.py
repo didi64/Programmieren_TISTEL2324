@@ -30,7 +30,7 @@ def init_share(pin):
         f.write(tok)
         
     res = subprocess.call(ROOT + '/bin/init_share')
-    if res:
+    if res == 0:
         print('share=Folder fuer User {} eingerichtet.'.format(user))     
     else:
-        print('Etwas ging schieferrorcode {}'.format(res), file=sys.stderr)
+        print('Etwas ging schief!  Errorcode {}'.format(res), file=sys.stderr)
