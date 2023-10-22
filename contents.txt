@@ -1,1 +1,1 @@
-1:Jupyterlab_Intro.ipynb Python_Intro_1.ipynb Python_Intro_2.ipynb table.py
+1:Web_Ressourcen.ipynb Jupyterlab_Intro.ipynb Python_Intro_1.ipynb Python_Intro_2.ipynb table.py

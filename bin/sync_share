@@ -11,7 +11,8 @@ SHARE_DIR="${NB_DIR}/share"
 # REPO_DIR diff remotes/origin/HEAD
 
 git -C "$SHARE_DIR" add .
-git -C "$SHARE_DIR" commit . -m "$(date)" || true
+# to avoid that empyt commits throw an error
+git -C "$SHARE_DIR" commit . -m "$(date)" --allow-empty
 git -C "$SHARE_DIR" fetch
 git -C "$SHARE_DIR" merge --no-ff --no-edit
 git -C "$SHARE_DIR" push
