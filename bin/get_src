@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-set -euo pipefail
+set -euxo pipefail
 
 REPO_URL="https://github.com/didi64/Programmieren_TISTEL2324"
 
@@ -22,7 +22,7 @@ if [[ -d $REPO_DIR ]]; then
         esac
     done
 
-    rm -rf $REPO_DIR
+    rm -rf "$REPO_DIR"/*
 fi
 
 git clone "$REPO_URL" "$REPO_DIR"
@@ -34,7 +34,7 @@ for folder in "$NB_DIR" "$MODUL_DIR" "$BIN_DIR"; do
     fi    
 done
 
-cp "$REPO_DIR"/bin/*  "$BIN_DIR"
+cp "$REPO_DIR"/bin/* "$BIN_DIR"
 cp "$REPO_DIR"/module_search_path "$ROOT"
 
 
