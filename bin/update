@@ -67,5 +67,6 @@ for item in "$@"; do
         process_file $item
     fi  
 done
+find -L "$HOME/work/notebooks" -type f -name "*.ipynb" -exec chmod 644 {} \;
 
 
