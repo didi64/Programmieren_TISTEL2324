@@ -22,7 +22,7 @@ if [[ -d $REPO_DIR ]]; then
         esac
     done
 
-    rm -rf "$REPO_DIR"/*
+    rm -rf "$REPO_DIR"
 fi
 
 git clone "$REPO_URL" "$REPO_DIR"
