@@ -1,1 +1,2 @@
 1:Web_Ressourcen.ipynb Jupyterlab_Intro.ipynb Python_Intro_1.ipynb Python_Intro_2.ipynb table.py
+2:Funktionen_I.ipynb Variabelnamen.ipynb L02_Exercises.ipynb SyntaxSemantik.ipynb Ueberblick_L02.ipynb Variabeln_Objekte_Referenzen.ipynb
