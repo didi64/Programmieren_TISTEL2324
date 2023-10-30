@@ -1,0 +1,70 @@
+#!/bin/bash
+
+set -euo pipefail
+
+REPO_URL="https://github.com/didi64/Programmieren_TISTEL2324"
+
+ROOT="${HOME}/work"
+
+REPO_DIR="$ROOT/src"
+NB_DIR="${ROOT}/notebooks"
+
+CONTENTS="${REPO_DIR}/contents.txt"
+
+is_number='^[0-9]+$'
+
+options=""
+HELP=$(cat <<EOF
+
+usage:
+======
+1) mupdate <number>
+   mupdates src and copies files of lesson <number> to  work/notebooks
+       
+2) mupdate
+   mupdates src
+ 
+3) mupdate <file1> [<file2> ...]
+   mupdates and copies files to work/notebooks
+ 
+in case of errors: try       
+       
+4) mupdate -f
+   forces updates of src       
+
+if this fails, type call
+get_src
+
+EOF
+)
+
+printf "$HELP"
+
+process_file () {
+    find "$REPO_DIR" -type d -name $1 -exec cp -ri {} "$NB_DIR" \;
+    find "$REPO_DIR" -type f -name $1 -exec cp -i {} "$NB_DIR" \;
+}
+
+pull () {
+    git -C "$REPO_DIR" pull
+}
+
+if [[ $# -ge 1 ]] && [[ "$1" == "-f" ]]; then
+    git -C "$REPO_DIR"  reset --hard HEAD
+fi
+
+pull
+
+echo "args: $@"
+for item in "$@"; do
+    if [[ $item =~ $is_number ]] ; then
+        files=$(sed -n "s/^${item}:\(.*\)/\1/p" "$CONTENTS")
+        for file in $files; do
+            process_file $file
+        done
+    else
+        process_file $item
+    fi  
+done
+
+
