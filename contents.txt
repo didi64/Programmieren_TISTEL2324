@@ -3,6 +3,7 @@
 3:L03_Recap.ipynb L03_WarmUp.ipynb if_then_else.ipynb  L03_Solutions.ipynb range.ipynb L03_WarmUp_done.ipynb Unpacking_Multiassignments.ipynb Ueberblick_L03.ipynb L03_Aufgaben.ipynb
 4:Aufgaben_For_Loop.ipynb For_und_While_Loops.ipynb Loesungen_For_Loop.ipynb zip_und_enumerate.ipynb Aufgaben_While.ipynb L04_Recap.ipynb Loesungen_While.ipynb Basic_Types.ipynb Loesungen_Basic_Types.ipynb Ueberblick_L04.ipynb
 5:Ueberblick_L05.ipynb Indexing_und_Slicing.ipynb Indexing_Slicing_Loesungen.ipynb  plus_gleich.ipynb plus_gleich_Loesungen.ipynb
-6:Dictionaries.ipynb Fallunterscheidung_mit_Dict.ipynb Dictionaries_Loesungen.ipynb Scope.ipynb
+6:Kantonskuerzel.ipynb Kantonskuerzel_Loesungen.ipynb Listcomprehension.ipynb Listcomprehension_Loesungen.ipynb Operatorprioritaeten.ipynb Random_words_Aufgaben.ipynb Random_words_Loesungen.ipynb Tabelle_formatiert_ausgeben.ipynb Ueberblick_L06.ipynb
+7:Dictionaries.ipynb Fallunterscheidung_mit_Dict.ipynb Dictionaries_Loesungen.ipynb Scope.ipynb
 101:Init_Notebookdir.ipynb
 002:L02_Loesungen.ipynb  
