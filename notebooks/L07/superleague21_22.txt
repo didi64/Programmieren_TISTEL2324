@@ -1,5 +1,5 @@
 # Abschlusstabelle der schweizer Raiffeisen Super League 2021/2022
-Mannschaft,Sp.,S,U,V,Tore,Diff.,Pkt
+Mannschaft, Sp., S,U,V,Tore,Diff.,Pkt
 FC Zürich, 36,23,7,6,78:46,32,76
 FC Basel, 36,15,17,4,70:41,29,62
 Y.B. Bern, 36,16,12,8,80:50,30,60
