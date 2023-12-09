@@ -5,5 +5,6 @@
 5:Ueberblick_L05.ipynb Indexing_und_Slicing.ipynb Indexing_Slicing_Loesungen.ipynb  plus_gleich.ipynb plus_gleich_Loesungen.ipynb
 6:Kantonskuerzel.ipynb Kantonskuerzel_Loesungen.ipynb Listcomprehension.ipynb Listcomprehension_Loesungen.ipynb Operatorprioritaeten.ipynb Random_words_Aufgaben.ipynb Random_words_Loesungen.ipynb Tabelle_formatiert_ausgeben.ipynb Ueberblick_L06.ipynb
 7:email_table.py Funktionen_Loesungen.ipynb Test_table_tools.ipynb Files.ipynb Module.ipynb show_table.ipynb Ueberblick_L07.ipynb Files_Loesungen.ipynb Module_Loesungen.ipynb superleague21_22.txt Funktionen_Aufgaben.ipynb table_tools.py
+8:Container_updaten.ipynb Dictionaries.ipynb Dictionaries_Loesungen.ipynb Funktionen_und_Methoden.ipynb Funktionen_und_Methoden_Loesungen.ipynb Karten.ipynb Karten_Loesungen.ipynb kz_kt.py
 101:Init_Notebookdir.ipynb
 002:L02_Loesungen.ipynb  
