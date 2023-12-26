@@ -12,16 +12,18 @@ DIR="notebooks"
 HELP=$(cat <<EOF
 usage: 1) nbsearch <pattern>
           Durchsucht alle Files in /home/tistel/work/notebooks nach <pattern>
-          und gibt die Namen der gefundenen Files aus
+          und gibt die Namen der gefundenen Files aus.
+          <pattern> ein String oder ein Regex. Enthaelt der String Leer- oder Sonderzeichen, ist er in Anfuehrungszeichen zu setzen.
 
        2) nbsearch -v <pattern>
-          Gib zusaetzlich die Zeile, die das Pattern enthaelt aus
+          Gibt zusaetzlich die Zeile, die das Pattern enthaelt aus
        
        3) nbsearch -d <Pfad> <pattern>
           Durchsucht alle Files in /home/tistel/work/<Pfad> nach <pattern>
           
        4) nbsearch -V <integer> <pattern> 
-          Gib zusaetzlich n Zeilen vor und nach der Zeile mit dem Pattern aus
+          Gibt zusaetzlich n Zeilen vor und nach der Zeile mit dem Pattern aus
+          
 EOF
 )
 
