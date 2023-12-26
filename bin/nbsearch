@@ -1,0 +1,68 @@
+#!/usr/bin/bash 
+
+set -euo pipefail
+
+# defaults
+USER=$(whoami)
+LFLAG="l"
+ROOT_DIR="/home/$USER/work"
+DIR="notebooks"
+
+HELP=$(cat <<EOF
+usage: 1) nbsearch <pattern>
+          Durchsucht alle Files in /home/tistel/work/notebooks nach <pattern>
+          und gibt die Namen der gefundenen Files aus
+
+       2) nbsearch -v <pattern>
+          Gib zusaetzlich die Zeile, die das Pattern enthaelt aus
+       
+       3) nbsearch -d <Pfad> <pattern>
+          Durchsucht alle Files in /home/tistel/work/<Pfad> nach <pattern>
+       
+EOF
+)
+
+# show help if no arguments are provided
+if [[ $# == 0 ]]; then
+    printf "$HELP\n"
+    exit 1
+fi
+
+# auxiliary function, returns the value of a commandline option
+get_arg () {
+   if [[ $# -gt 1 ]]
+   then
+       arg="$2"
+   else
+       art=""    
+   fi    
+   
+   #return arg
+   echo "$arg"
+}
+
+# parse arguments and overwrite defaults
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -v) LFLAG=""
+        set -- "${@:2}"
+        ;;     
+    -d)
+      DIR=$(get_arg "$@")
+      set -- "${@:3}"
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1") # save positional arg
+      shift # past argument
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
+
+# the actual script
+
+GFLAGS="ri$LFLAG"
+grep "-$GFLAGS" -A 1 -B 1 --include="*.ipynb" --color=always --exclude-dir=".?*" --exclude-dir="__pycache__" "$1" "$ROOT_DIR/$DIR"
+
+

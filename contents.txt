@@ -9,3 +9,4 @@
 9:Dictionaries_sortieren.ipynb Dictionary_Comprehension.ipynb Fallunterscheidung_mit_Dict.ipynb Funktionen_II.ipynb Funktionen_II_Loesungen.ipynb Iterables_sortieren.ipynb Iterables_sortieren_Loesungen.ipynb Musterpruefung.ipynb Musterpruefung_Loesungen.ipynb Scope.ipynb Ueberblick_L09.ipynb
 101:Init_Notebookdir.ipynb
 002:L02_Loesungen.ipynb  
+ex:Repetitionsaufgaben_II.ipynb Repetitionsaufgaben_II_Loesungen.ipynb Repetitionsaufgaben_I.ipynb Repetitionsaufgaben_I_Loesungen.ipynb
