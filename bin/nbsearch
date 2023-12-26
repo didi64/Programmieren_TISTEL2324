@@ -20,8 +20,8 @@ usage: 1) nbsearch <pattern>
        3) nbsearch -d <Pfad> <pattern>
           Durchsucht alle Files in /home/tistel/work/<Pfad> nach <pattern>
           
-       4) nbsearch-V <integer> <pattern> 
-          Gib zusaetzlich n Zeile vor und nach der Zeile mit dem Pattern  aus
+       4) nbsearch -V <integer> <pattern> 
+          Gib zusaetzlich n Zeilen vor und nach der Zeile mit dem Pattern aus
 EOF
 )
 
