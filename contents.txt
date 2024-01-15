@@ -12,4 +12,4 @@
 101:Init_Notebookdir.ipynb
 002:L02_Loesungen.ipynb  
 99:Repetitionsaufgaben_II.ipynb Repetitionsaufgaben_II_Loesungen.ipynb Repetitionsaufgaben_I.ipynb Repetitionsaufgaben_I_Loesungen.ipynb Musterpruefung.ipynb Musterpruefung_Loesungen.ipynb
-88:eqs.txt solutions.pyc
+88:eqs.txt solutions.pyc Pruefung_13_01_2024.ipynb
