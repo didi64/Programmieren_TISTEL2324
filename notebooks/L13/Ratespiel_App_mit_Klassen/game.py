@@ -7,6 +7,7 @@ class Game:
         self.number_to_guess = None
         self.guesses_with_feedback =  []
         self.game_on = False
+        
         self._callbacks = []
         
     def new_game(self):
@@ -14,6 +15,7 @@ class Game:
         self.guesses_with_feedback.clear()
         self.number_to_guess = random.randint(*self.range)
         self.game_on = True
+       
         self._notify('new_game', self)  
         
     def guess(self, zahl):
@@ -30,6 +32,7 @@ class Game:
             self._callbacks.append(callback)      
             
     def _notify(self, event, data):
+        '''rufe alle regisrierten Callbacks auf'''
         for f in self._callbacks:
             f(event, data)     
             

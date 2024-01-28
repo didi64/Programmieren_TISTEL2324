@@ -21,8 +21,15 @@ class View:
         '''loesche Vordergrund, zeichne Skala'''
         self.fg.clear()
         self.fg.stroke_lines([self.line_start, self.line_end])
+        
+    def on_guess(self, game):
+        '''Zeichen Versuch auf Skala ein'''
+        guess, feedback = game.guesses_with_feedback[-1]
+        self.fg.fill_style = self.colors[feedback]
+        pos = self._get_pt_pos(guess, game.range[1])
+        self.fg.fill_circle(*pos, radius = self.pt_size)            
       
-    def get_pt_pos(self, zahl, upper):
+    def _get_pt_pos(self, zahl, upper):
         '''gibt x und y Koordinate des Punktes zurueck,
            der zahl auf der Skala repraesentiert
         '''
@@ -30,13 +37,6 @@ class View:
         x1 = self.line_end[0]
         return x0 + (x1 - x0)/(upper-1) * (zahl-1), y0        
         
-    def on_guess(self, game):
-        '''Zeichen Versuch auf Skala ein'''
-        guess, feedback = game.guesses_with_feedback[-1]
-        self.fg.fill_style = self.colors[feedback]
-        pos = self.get_pt_pos(guess, game.range[1])
-        self.fg.fill_circle(*pos, radius = self.pt_size)         
-
     def callback(self, event, data):
         '''rufe Methode mit Namen 'on_' + event auf'''
         getattr(self, 'on_' + event)(data)
