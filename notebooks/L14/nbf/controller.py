@@ -6,7 +6,7 @@ class Controller:
     def __init__(self, nbsearcher):
         self.nbsearcher = nbsearcher
         self.pc = PatternCollector()
-        self.ps = PathSelector()
+        self.ps = PathSelector(rootdir=nbsearcher.root)
         self.button = Button(description = 'suche!', 
                              layout = {'border' : '2px solid red', 'width'  : '100px'},
                             )

@@ -21,7 +21,7 @@ class NBSearcher(Observable):
         # iterator
         files = helpers.file_iter(rootdir, 
                                   filetypes = ('.ipynb', '.py'), 
-                                  exclude_dirs=('__pycache__',),
+                                  exclude_dirs=('__pycache__', 'src'),
                                  )
         for fn in files:
             s = searchables.Searchable(fn)

@@ -9,7 +9,7 @@ class PathSelector:
                    'file'  :    '  ',
                   }  
     
-    def __init__(self, rootdir='/home/probst/Projects/JupyterNotebooks'):
+    def __init__(self, rootdir):
         self.rootdir = rootdir
         self.path = self.rootdir
         self.relpath = os.curdir
