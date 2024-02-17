@@ -11,7 +11,7 @@
 11:Callbacks.ipynb Widgets_Select_Output.ipynb Pruefung_Loesungen.ipynb
 12:canvas_helpers.py Canvas_Widget_I.ipynb Capture_CallbackErrors.ipynb Info_Projektarbeit.ipynb minimal_drawing_app.py mock_events.py MultiCanvas.ipynb Run_Drawing_App.ipynb Textalignment_Linecaps_Linejoins.ipynb Ueberblick_L12.ipynb Variadic_Functions.ipynb Ratespiel_App
 13:canvas_helpers.py Colorpicker_Tuerme.ipynb Hanoi Klassen.ipynb Ratespiel_App_mit_Klassen Tastensteuerung.ipynb Ueberblick_L13.ipynb
-14:Game_steine.py Game_Steine_verschieben.ipynb HoldCanvas.ipynb Loesung_Steine_verschieben.ipynb nbf Ueberblick_L14.ipynb View_Steine_verschieben.ipynb Notebook_Finder.ipynb notebook_finder.png resultate.png
+14:Game_steine.py Game_Steine_verschieben.ipynb HoldCanvas.ipynb Loesung_Steine_verschieben.ipynb nbf Ueberblick_L14.ipynb View_Steine_verschieben.ipynb Notebook_Finder.ipynb notebook_finder.png resultate.png game_steine.py
 101:Init_Notebookdir.ipynb
 002:L02_Loesungen.ipynb  
 99:Repetitionsaufgaben_II.ipynb Repetitionsaufgaben_II_Loesungen.ipynb Repetitionsaufgaben_I.ipynb Repetitionsaufgaben_I_Loesungen.ipynb Musterpruefung.ipynb Musterpruefung_Loesungen.ipynb
