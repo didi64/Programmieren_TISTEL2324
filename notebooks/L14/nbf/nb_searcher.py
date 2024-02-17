@@ -1,5 +1,5 @@
 import  os
-from observable import Observable
+from .observable import Observable
 from . import helpers, searchables
 
 class NBSearcher(Observable):
