@@ -1,8 +1,7 @@
 class Game:
     
     def __init__(self):
-        self.n = 6
-        self.position = [False] * self.n
+        self.position = [None] *6
        
     def callback(self):
         print('Message from Callback:',  e, d)
@@ -11,7 +10,7 @@ class Game:
         '''gibt True zurueck falls alle idx in der Liste idxs
            gueltige Indices fuer position sind
         '''   
-        return all(0 <= idx < self.n for idx in idxs)
+        return all(0 <= idx < len(self.position) for idx in idxs)
     
     def is_legal(self, move_type, idxs):
         if not self.are_valid(idxs):
@@ -37,7 +36,7 @@ class Game:
             return
         
         self.position[src] = False
-        self.position[target] =True
+        self.position[target] = True
         self.callback('move_stone', (src, target))
         
     def __repr__(self):
