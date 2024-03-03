@@ -13,7 +13,7 @@
 13:canvas_helpers.py Colorpicker_Tuerme.ipynb Hanoi Klassen.ipynb Ratespiel_App_mit_Klassen Tastensteuerung.ipynb Ueberblick_L13.ipynb
 14:Game_steine.py Game_Steine_verschieben.ipynb HoldCanvas.ipynb Loesung_Steine_verschieben.ipynb nbf Ueberblick_L14.ipynb View_Steine_verschieben.ipynb Notebook_Finder.ipynb notebook_finder.png resultate.png game_steine.py
 15:Any_and_all.ipynb Bilder_und_Text Repetition_Widgets.ipynb Stein_auf_Punkt_setzen Threading_Eventloop.ipynb
-L16:Text_Widget.ipynb  Template_Buttons.ipynb Threading_Asyncio
+16:Text_Widget.ipynb Template_Buttons.ipynb Threading_Asyncio
 24:Muehle_Skizze
 25:Pong_Skizze
 101:Init_Notebookdir.ipynb
