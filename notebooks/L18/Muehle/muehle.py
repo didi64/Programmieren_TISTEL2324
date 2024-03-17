@@ -1,7 +1,6 @@
 class Game:
-    def __init__(self, n = 9):
-        self.players = [0, 1]
-        self.nstones = n
+    def __init__(self):
+        self.players = (0, 1)
         self.muehlen = ([[(r, i), (r, i+1), (r, (i+2) % 8)] 
                          for r in range(3) for i in range(8) if self.is_even(i)
                         ] +
@@ -9,7 +8,9 @@ class Game:
                        )
         self.callback = lambda event, data: print(event, data)
         
-    def new_game(self):
+    def new_game(self, n=9):
+        self.nstones = n
+        self.stones_left = n
         self.board = {(r, i): None for r in range(3) for i in range(8)}
         self.ptm = 0 # player to move
         self.ply = 0 # Halbzuege
@@ -17,10 +18,17 @@ class Game:
         self.phase = 'place' # place, move
         self.winner = None   # 0 oder 1 oder None
         
-        self.callback('new_game', (None,))
-        data = (self.ptm, self.phase, self.muehle, self.winner, self.nstones)
-        self.callback('show_status', data)
+        self.callback('new_game', {'muehlen': self.muehlen})
+        self.callback('show_status', self.status())
        
+    def status(self):
+        return {'ptm': self.ptm, 
+                'phase': self.phase, 
+                'muehle': self.muehle, 
+                'winner': self.winner, 
+                'stones_left': self.stones_left,
+               }
+    
     def is_even(self, i):
         return i % 2 == 0
     
@@ -90,16 +98,16 @@ class Game:
             self.muehle = self.is_muehle(src)
             if self.ply >= 2 * self.nstones - 1:
                 self.phase = 'move'
-            self.callback('place_stone', (src, player))
+            self.callback('place_stone', {'src': src, 'player': player})
         elif tp == 'm':
             self.board[src] = None
             self.board[target] = player 
             self.muehle = self.is_muehle(target)
-            self.callback('move_stone', (src, target, player))
+            self.callback('move_stone', {'src': src, 'target': target, 'player': player})
         elif tp == 'r':
             self.board[src] = None
             self.muehle = False
-            self.callback('remove_stone', (src,))
+            self.callback('remove_stone', {'src': src})
        
         self.update_ptm_and_winner()
         
@@ -111,9 +119,8 @@ class Game:
             self.ptm = 1 - self.ptm   
             self.ply += 1
             
-        stones_left = self.nstones - self.ply // 2
-        data =  (self.ptm, self.phase, self.muehle, self.winner, stones_left)
-        self.callback('show_status', data)
+        self.stones_left = self.nstones - self.ply // 2
+        self.callback('show_status', self.status())
         
     def __repr__(self):
         return 'Am Zug: {}\nWinner: {}\nBoard {}'.\

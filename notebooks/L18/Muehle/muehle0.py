@@ -1,6 +1,6 @@
 class Game:
     def __init__(self):
-        self.players = [0, 1]
+        self.players = (0, 1)
         self.muehlen = ([[(r, i), (r, i+1), (r, (i+2) % 8)] 
                          for r in range(3) for i in range(8) if self.is_even(i)
                         ] +
@@ -13,7 +13,7 @@ class Game:
         self.ptm = 0 # player to move
         self.muehle = False  # hat jemand eine Muehle
         self.phase = 'place' # place, move
-        self.callback('new_game', (None,))
+        self.callback('new_game', (self.muehlen,))
        
     def is_even(self, i):
         return i % 2 == 0
