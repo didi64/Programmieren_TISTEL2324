@@ -15,6 +15,7 @@
 15:Any_and_all.ipynb Bilder_und_Text Repetition_Widgets.ipynb Stein_auf_Punkt_setzen Threading_Eventloop.ipynb
 16:Text_Widget.ipynb Template_Buttons.ipynb Threading_Asyncio
 18:Ueberblick_L18.ipynb PEP8.ipynb wordleColoring_handValue.ipynb Zugang_Unterrichtsbeurteilung.ipynb Muehle VierGewinnt
+19:Projekte2024
 24:Muehle_Skizze
 25:Pong_Skizze
 101:Init_Notebookdir.ipynb
